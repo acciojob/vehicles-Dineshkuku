@@ -3,11 +3,14 @@ package com.driver;
 public class Vehicle {
 
     private String name;
-    private int currentSpeed;
+    int currentSpeed;
+    /**
+     *
+     */
     private int currentDirection;
 
-    public Vehicle() {
-
+    public String getName() {
+        return name;
     }
 
     public int getCurrentSpeed() {
@@ -32,8 +35,8 @@ public class Vehicle {
 
     public void move(int speed, int direction){
         //set the values of currentSpeed and currentDirection
-        this.currentSpeed+=speed;
-        this.currentDirection+=direction;
+        this.currentSpeed=speed;
+        this.currentDirection=direction;
         System.out.println("move method called - The speed is changed to: " + currentSpeed + ", and the direction is changed to: " + currentDirection + " degrees");
     }
 
